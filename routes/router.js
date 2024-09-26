@@ -2,6 +2,8 @@ var express = require('express');
 const { register, login, getUserProfile } = require('../controllers/authController');
 const {bookAppointment,getUserAppointments,getTherapistAppointments  } = require('../controllers/appointmentController');
 const { insertTherapist, getTherapists, getTherapistById } = require('../controllers/therapistController');
+const { sendOtp } = require('../controllers/otpverificationController');
+
 const { userInfo } = require('os');
 var router = express.Router();
 
@@ -22,5 +24,6 @@ router.get('/userappoint',getUserAppointments );
 router.post('/profiledata',getUserProfile);
 router.get('/therapistappoint',getTherapistAppointments);
 router.get('/gettherapistById',getTherapistById);
+router.post('/sendOtp',sendOtp);
 
 module.exports = router;
