@@ -1,6 +1,6 @@
 // controllers/chatController.js
 const Chat = require('../models/chatModel');
-
+//new
 // Send message
 exports.sendMessage = async (req, res) => {
   const { roomId, sender, message } = req.body;

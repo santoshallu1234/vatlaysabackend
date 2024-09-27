@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Node modules
+node_modules/
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Environment variables
+.env
+
+# Build outputs
+dist/
+build/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# IDE specific files (optional)
+.vscode/
+.idea/
+
+# Mac specific files (optional)
+.DS_Store
+
+# Lock files
+yarn.lock
+package-lock.json
+
+# Coverage directory used by testing tools
+coverage/
