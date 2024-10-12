@@ -60,3 +60,16 @@ exports.getUserProfile = async (req, res) => {
     res.status(500).json({ msg: 'Server error' });
   }
 };
+
+
+exports.getAllUsers = async (req, res) => {
+  try {
+    // Fetch all users and exclude the password field
+    const users = await User.find().select('-password');
+    
+    res.status(200).json(users);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ msg: 'Server error' });
+  }
+};
